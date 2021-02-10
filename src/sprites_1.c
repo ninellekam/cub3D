@@ -45,8 +45,8 @@ void    sprites_array_2(t_game *game, size_t nums, int x, int y)
     game->sprites.sprite[nums] = (t_double_vec*)malloc(sizeof(t_double_vec));
 	if (!(game->sprites.sprite[nums]))
 		exit(-1);
-	game->sprites.sprite[nums]->y = (double)x + 0.5;
-	game->sprites.sprite[nums]->x = (double)y + 0.5;
+	game->sprites.sprite[nums]->x = (double)x + 0.5;
+	game->sprites.sprite[nums]->y = (double)y + 0.5;
 }
 
 int	sprites_array_1(t_game *game)

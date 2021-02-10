@@ -56,7 +56,7 @@ static int	direction_north_south(t_player *player, t_double_vec *plane)
 	{
 		player->dir.x = 0;
 		player->dir.y = -1;
-		plane->x = -0.66;
+		plane->x = 1;
 		plane->y = 0;
 	}
 	else if (player->start_view == 'S')
