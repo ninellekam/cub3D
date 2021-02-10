@@ -47,8 +47,11 @@ void    sprites_array_2(t_game *game, size_t nums, int x, int y)
 		exit(-1);
 	game->sprites.sprite[nums]->x = (double)x + 0.5;
 	game->sprites.sprite[nums]->y = (double)y + 0.5;
+<<<<<<< HEAD
+=======
 	if (nums == 1)
 		printf("  D %f ", game->sprites.sprite[1]->x);
+>>>>>>> master
 }
 
 int	sprites_array_1(t_game *game)

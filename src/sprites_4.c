@@ -56,7 +56,7 @@ void    sprites_3(t_game *game, double *mas)
 			while (s->hi < s->end_y)
 			{
 				init_color(game, s->hi);
-				if ((s->color & 0x00FFFFFF) != 9961608)
+				if (s->color != -0x1000000)
 					my_mlx_pixel_put(&game->img, s->ok,
 							s->hi, s->color);
 				s->hi++;

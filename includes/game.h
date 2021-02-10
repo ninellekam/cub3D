@@ -16,7 +16,7 @@
 #include "mlx.h"
 #include <math.h>
 #include "header_map.h"
-
+#include "libft.h"
 # define ERROR -1
 # define GOOD	1
 # define ROTATE 0.1
@@ -218,6 +218,14 @@ void    sprites_1(t_game *game, size_t nums);
 void    sprites_2(t_game *game, size_t i);
 void    sprites_3(t_game *game, double *mas);
 void	quick_sort(int *order, double *distance, size_t len);
+<<<<<<< HEAD
+int		ft_strcmp(const char *s1, const char *s2);
+void    sprites(t_game *game, double *mas);
+void		move_player(t_game *game);
+void	init_button(t_button *but);
+
+#endif
+=======
 char	*ft_strchr(const char *s, int c);
 void	init_button(t_button *but);
 
@@ -232,3 +240,4 @@ int		ft_strcmp(const char *s1, const char *s2);
 size_t	ft_strlen(const char *s);
 
 #endif
+>>>>>>> master

@@ -116,9 +116,11 @@ int			init_ray_1(t_game *game, size_t i)
 	t_map			  *map;
 
 	ray = &game->ray;
+	// ray->plane.x = 0;
+	// ray->plane.y = 0;
 	player = &game->player;
 	map = &game->map;
-	ray->camera_x = 2 * (map->R[0] - i) / (double)(map->R[0]) - 1;
+	ray->camera_x = 2 * i / (double)(map->R[0]) - 1;
 	init_dir_map(ray, player, game);
 	init_delta(ray);
 	init_ray_2(ray, player);

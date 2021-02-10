@@ -14,7 +14,7 @@
 
 void    sprites_2(t_game *game, size_t i)
 {
-    t_sprites s;
+    t_sprites *s;
     int     *order;
     t_double_vec pos;
     t_double_vec plane;
@@ -23,8 +23,16 @@ void    sprites_2(t_game *game, size_t i)
     dir = game->player.dir;
     pos = game->player.pos;
     plane = game->ray.plane;
-    s = game->sprites;
+    s = &game->sprites;
     order = game->sprites.order;
+<<<<<<< HEAD
+    s->spriteX = s->sprite[order[i]]->x - pos.x;
+    s->spriteY = s->sprite[order[i]]->y - pos.y;
+    s->lyambda = 1.0 / (plane.x * dir.y - dir.x * plane.y);
+    s->transformX = s->lyambda * (dir.y * s->spriteX - dir.x * s->spriteY);
+    s->transformY = s->lyambda * (-plane.y * s->spriteX + plane.x * s->spriteY);
+    s->screenX = (int)((game->map.R[0] / 2) * (1 + s->transformX / s->transformY));
+=======
     s.spriteX = s.sprite[order[i]]->x - pos.x;
     s.spriteY = s.sprite[order[i]]->y - pos.y;
     s.lyambda = 1.0 / (plane.x * dir.y - dir.x * plane.y);
@@ -32,6 +40,7 @@ void    sprites_2(t_game *game, size_t i)
     s.transformY = s.lyambda * (-plane.y * s.spriteX + plane.x * s.spriteY);
     s.screenX = (int)((game->map.R[0] - game->map.R[0] / 2) *
 	(1 + s.transformX / s.transformY));
+>>>>>>> master
 }
 
 void    sprites_1(t_game *game, size_t nums)
@@ -54,10 +63,17 @@ void    sprites_1(t_game *game, size_t nums)
 	}
     pos = game->player.pos;
     sprt = game->sprites.sprite;
+	// printf("spr.x%f", sprt[i]->x);
+	// printf("spr.y%f", sprt[i]->y);
+	// printf("pos.x%f", pos.x);
+	// printf("pos.y%f", pos.y);
+	// exit(0);
     while (i < game->sprites.nums)
     {
         order[i] = i;
-        distant[i] = ((pos.x - sprt[i]->x) * (pos.x - sprt[i]->x) + (pos.y - sprt[i]->y) * (pos.y - sprt[i]->y));
+		distant[i] = pow((pos.x - sprt[i]->x), 2);
+		distant[i] += pow((pos.y - sprt[i]->y), 2);
+        // distant[i] = ((pos.x - sprt[i]->x) * (pos.x - sprt[i]->x) + (pos.y - sprt[i]->y) * (pos.y - sprt[i]->y));
 		i++;
     }
     game->sprites.order = order;
