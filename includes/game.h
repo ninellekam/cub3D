@@ -6,7 +6,7 @@
 /*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:39:01 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/07 17:00:29 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/10 13:01:50 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,7 @@ typedef struct			s_sprites
 	int				ok;
 	uint32_t			color;
 	size_t				hi;
+	double				d;
 }						t_sprites;
 
 // -------------------------- game ----------------------
@@ -217,7 +218,17 @@ void    sprites_1(t_game *game, size_t nums);
 void    sprites_2(t_game *game, size_t i);
 void    sprites_3(t_game *game, double *mas);
 void	quick_sort(int *order, double *distance, size_t len);
+char	*ft_strchr(const char *s, int c);
+void	init_button(t_button *but);
 
 
+void	is_wall_front(t_game *game);
+void	is_wall_backward(t_game *game);
+void	rotate_right(t_game *game);
+void	rotate_left(t_game *game);
+void	move_player(t_game *game);
+void	sprites(t_game *game, double *mas);
+int		ft_strcmp(const char *s1, const char *s2);
+size_t	ft_strlen(const char *s);
 
 #endif

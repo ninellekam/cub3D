@@ -1,0 +1,12 @@
+{
+	"configurations": [
+	{
+		"name": "(lldb) Подключить",
+		"type": "cppdbg",
+		"request": "attach",
+		"program": "${workspaceFolder}/cub3d",
+		"processId": "${command:pickProcess}",
+		"MIMode": "lldb"
+	}
+	]
+}

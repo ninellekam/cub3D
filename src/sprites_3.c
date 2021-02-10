@@ -6,7 +6,7 @@
 /*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 17:09:23 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/07 16:54:19 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/10 13:00:35 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ void    sprites_2(t_game *game, size_t i)
     s.lyambda = 1.0 / (plane.x * dir.y - dir.x * plane.y);
     s.transformX = s.lyambda * (dir.y * s.spriteX - dir.x * s.spriteY);
     s.transformY = s.lyambda * (-plane.y * s.spriteX + plane.x * s.spriteY);
-    s.screenX = (int)((game->map.R[0] / 2) * (1 + s.transformX / s.transformY));
+    s.screenX = (int)((game->map.R[0] - game->map.R[0] / 2) *
+	(1 + s.transformX / s.transformY));
 }
 
 void    sprites_1(t_game *game, size_t nums)
@@ -89,8 +90,8 @@ void    sprite_draw_x(t_game *game)
 	if (s->start_x < 0)
 		s->start_x = 0;
 	s->end_x = s->s_w / 2 + s->screenX;
-    if(s->end_x >= game->map.R[0])
-        s->end_x  = game->map.R[0] - 1;
+    // if(s->end_x >= game->map.R[0])
+    //     s->end_x  = game->map.R[0] - 1;
 }
 
 void    sprite_draw(t_game *game)
