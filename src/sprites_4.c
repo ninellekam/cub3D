@@ -6,7 +6,7 @@
 /*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 16:53:19 by ninakamkia        #+#    #+#             */
-/*   Updated: 2021/02/09 13:29:14 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/09 18:44:34 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ void	init_color(t_game *game, double hi)
 	double		d;
 
 	s = &game->sprites;
-	d = s->hi * 256 - game->map.R[1] * 128 +
+	s->d = s->hi * 256 - game->map.R[1] * 128 +
 		s->s_h * 128;
-	s->texY = ((d * s->tex.Y) /
+	s->texY = ((s->d * s->tex.Y) /
 			s->s_h) / 256;
 	s->color = ((int*)s->tex.img.addr)
 		[(int)(s->tex.X * s->texY + s->texX)];

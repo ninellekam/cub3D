@@ -6,7 +6,7 @@
 /*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 17:02:26 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/07 16:20:01 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/10 12:47:17 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,11 @@ void    sprites_array_2(t_game *game, size_t nums, int x, int y)
 		exit(-1);
 	game->sprites.sprite[nums]->x = (double)x + 0.5;
 	game->sprites.sprite[nums]->y = (double)y + 0.5;
+<<<<<<< HEAD
+=======
+	if (nums == 1)
+		printf("  D %f ", game->sprites.sprite[1]->x);
+>>>>>>> master
 }
 
 int	sprites_array_1(t_game *game)
@@ -68,10 +73,10 @@ int	sprites_array_1(t_game *game)
 		while (map[y][x] != '\0')
 		{
 			if (ft_strchr("2", map[y][x]))
-            {
-                sprites_array_2(game, nums, x, y);
-                nums++;
-            }
+			{
+				sprites_array_2(game, nums, x, y);
+				nums++;
+			}
 			x++;
 		}
 		y++;
@@ -84,8 +89,9 @@ void	init_sprites(t_game *game)
 	size_t num;
 
 	num = sprites_num(game);
-	game->sprites.sprite = (t_double_vec**)malloc(sizeof(t_double_vec) * (num + 1));
+	game->sprites.sprite = (t_double_vec**)malloc(sizeof(t_double_vec*) * (num + 1));
 	game->sprites.sprite[num] = NULL;
-	draw_sprites(game);
 	sprites_array_1(game);
+	printf(" U %f", game->sprites.sprite[1]->x);
+	draw_sprites(game);
 }
