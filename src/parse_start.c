@@ -6,7 +6,7 @@
 /*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/26 12:09:58 by ninakamkia        #+#    #+#             */
-/*   Updated: 2021/02/09 18:40:24 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/02 17:46:51 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main()
 
 	map = &a;
 	init_map(map);
-	parse_map("maps/map.cub", map);
+	parse_map("map.cub", map);
 	game_start(map);
 	return (0);
 }
