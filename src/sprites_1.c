@@ -6,11 +6,26 @@
 /*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 17:02:26 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/07 16:20:01 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/10 17:47:05 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "game.h"
+
+void		draw_sprites(t_game *game)
+{
+	t_map				*map;
+
+	map = &game->map;
+	game->sprites.tex.relative_path = map->S;
+	game->sprites.tex.img.img = mlx_xpm_file_to_image(game->mlx.mlx,
+			game->sprites.tex.relative_path, &game->sprites.tex.X, &game->sprites.tex.Y);
+	if (!(game->sprites.tex.img.img))
+		exit(-1);
+	game->sprites.tex.img.addr = mlx_get_data_addr(game->sprites.tex.img.img,
+		&game->sprites.tex.img.bits_per_pixel, &game->sprites.tex.img.line_length, &game->sprites.tex.img.endian);
+}
+
 
 int	sprites_num(t_game *game)
 {
@@ -68,10 +83,10 @@ int	sprites_array_1(t_game *game)
 		while (map[y][x] != '\0')
 		{
 			if (ft_strchr("2", map[y][x]))
-            {
-                sprites_array_2(game, nums, x, y);
-                nums++;
-            }
+			{
+				sprites_array_2(game, nums, x, y);
+				nums++;
+			}
 			x++;
 		}
 		y++;
@@ -84,8 +99,8 @@ void	init_sprites(t_game *game)
 	size_t num;
 
 	num = sprites_num(game);
-	game->sprites.sprite = (t_double_vec**)malloc(sizeof(t_double_vec) * (num + 1));
+	game->sprites.sprite = (t_double_vec**)malloc(sizeof(t_double_vec*) * (num + 1));
 	game->sprites.sprite[num] = NULL;
-	draw_sprites(game);
 	sprites_array_1(game);
+	draw_sprites(game);
 }

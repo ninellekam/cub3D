@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   raycasting_3.c                                     :+:      :+:    :+:   */
+/*   raycast.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 19:46:10 by ninakamkia        #+#    #+#             */
-/*   Updated: 2021/02/07 16:12:24 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/10 18:32:58 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		raycasting_render(t_game *game)
 		mas[i] = r->perp_wall_dist;
 		i++;
 	}
-	sprites(game, mas);
+	ft_sprite(game, mas);
 	mlx_put_image_to_window(mlx->mlx, mlx->win, game->img.img, 0, 0);
 	return (0);
 }

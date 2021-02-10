@@ -6,7 +6,7 @@
 /*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/30 12:39:01 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/07 17:00:29 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/10 18:20:57 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,8 +146,8 @@ typedef struct			s_sprites
 	int				texX;
 	int				texY;
 	int				ok;
-	uint32_t			color;
-	size_t				hi;
+	uint32_t		color;
+	int				hi;
 }						t_sprites;
 
 // -------------------------- game ----------------------
