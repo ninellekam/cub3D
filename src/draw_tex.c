@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   draw_tex.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/16 12:28:52 by yzena             #+#    #+#             */
+/*   Updated: 2021/02/16 12:28:55 by yzena            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "game.h"
 
@@ -23,7 +34,7 @@ static t_t	*init_tex(t_game *game)
 	return (NULL);
 }
 
-static void			init_vars(t_game *game, t_tex_draw_vars *vars)
+static void	init_vars(t_game *game, t_tex_draw_vars *vars)
 {
 	t_ray				*ray;
 	t_player			*player;
@@ -46,7 +57,7 @@ static void			init_vars(t_game *game, t_tex_draw_vars *vars)
 	vars->tex_num = game->map.map[ray->map.y][ray->map.x] - 1;
 }
 
-void				draw_skye(t_game *g, size_t i, int start, int end)
+void		draw_skye(t_game *g, size_t i, int start, int end)
 {
 	while (start < end)
 	{
@@ -55,7 +66,7 @@ void				draw_skye(t_game *g, size_t i, int start, int end)
 	}
 }
 
-void				draw_ground(t_game *g, size_t i, int start, int end)
+void		draw_ground(t_game *g, size_t i, int start, int end)
 {
 	while (start < end)
 	{
@@ -64,7 +75,7 @@ void				draw_ground(t_game *g, size_t i, int start, int end)
 	}
 }
 
-void				draw_tex(t_game *game, size_t i)
+void		draw_tex(t_game *game, size_t i)
 {
 	t_tex_draw_vars		vars;
 	t_ray				*ray;

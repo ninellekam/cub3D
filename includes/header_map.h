@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   header_map.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
+/*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/24 20:35:45 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/02 17:40:37 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/14 17:17:09 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ typedef struct			s_strs
 
 typedef	struct			s_map
 {
-	size_t				R[2];
+	int					R[2];
 	char				*NO;
 	char				*SO;
 	char				*WE;

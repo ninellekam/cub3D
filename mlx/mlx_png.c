@@ -133,7 +133,7 @@ int	mipng_fill_img(void *img, unsigned char *buf, png_info_t *pi)
 	{
 	  // printf("ipos %d iline %d pi->width %d bpos %d\n", ipos, iline, pi->width, bpos);
 	  if ((current_filter = buf[bpos++]) > 4)
-	    {  
+	    {
 	    return (ERR_DATA_FILTER);
 	    }
 	}
@@ -223,7 +223,7 @@ int	mipng_data(void *img, unsigned char *dat, png_info_t *pi)
 	  b_pos += Z_CHUNK - z_strm.avail_out;
 	}
       dat += len + 4 + 4 + 4;
-    } 
+    }
   inflateEnd(&z_strm);
   if (b_pos != pi->width*pi->height*pi->bpp+pi->height)
     {
@@ -263,7 +263,7 @@ int	mipng_crc(unsigned char *ptr, int len)
 
   file_crc = *((unsigned int *)(ptr+4+4+len));
   file_crc = ntohl(file_crc);
-  
+
   crc = 0xffffffffL;
   i = 0;
   while (i < len+4)
@@ -367,7 +367,7 @@ void	*mlx_int_parse_png(void *xvar, unsigned char *fptr, int size, int *width, i
   unsigned char *hdr;
   unsigned char *dat;
   png_info_t	pi;
-  void          *img;
+  void	      *img;
 
   if ((err = mipng_magic(fptr, size)))
     {
@@ -410,7 +410,7 @@ void	*mlx_png_file_to_image(void *xvar, char *file, int *width, int *height)
   int			fd;
   int			size;
   unsigned char		*ptr;
-  void                  *img;
+  void	              *img;
 
   if ((fd = open(file, O_RDONLY)) == -1 || (size = lseek(fd, 0, SEEK_END)) == -1 ||
       (ptr = mmap(0, size, PROT_READ, MAP_PRIVATE, fd, 0)) == (void *)MAP_FAILED)

@@ -3,22 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   parse_initialize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/22 21:25:59 by ninakamkia        #+#    #+#             */
-/*   Updated: 2021/02/06 16:54:23 by yzena            ###   ########.fr       */
+/*   Created: 2021/02/16 12:30:24 by yzena             #+#    #+#             */
+/*   Updated: 2021/02/17 15:59:12 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "parse_initialize.h"
+#include "parse.h"
 
-// ------------------------- technic part - R C F --------------------------------------------
-int	 parse_tech(t_strs s, t_map *map)
+int	init_check(t_map *map)
+{
+	if (map->R[0] == -1)
+		return (ERROR);
+	if (map->R[1] == -1)
+		return (ERROR);
+	if (map->NO == 0)
+		return (ERROR);
+	if (map->SO == 0)
+		return (ERROR);
+	if (map->WE == 0)
+		return (ERROR);
+	if (map->EA == 0)
+		return (ERROR);
+	if (map->S == 0)
+		return (ERROR);
+	if (map->F == -1)
+		return (ERROR);
+	if (map->C == -1)
+		return (ERROR);
+	return (GOOD);
+}
+
+int	parse_rfc(t_strs s, t_map *map)
 {
 	int check;
+
 	if (s.len == 3 && is_resolution(s.strs[0]))
 	{
-		check = resolution(s, map);
+		check = ft_resolution(s, map);
 		return (check);
 	}
 	if (s.len == 2 && is_floor(s.strs[0]))
@@ -28,13 +51,13 @@ int	 parse_tech(t_strs s, t_map *map)
 	}
 	if (s.len == 2 && is_ceiling(s.strs[0]))
 	{
-		check = ceiling(s, map);
+		check = ft_ceiling(s, map);
 		return (check);
 	}
 	return (BAD);
 }
 
-int	 parse_tex_1(t_strs s, t_map *map)
+int	parse_no_so_we(t_strs s, t_map *map)
 {
 	if (s.len == 2 && is_no(s.strs[0]))
 	{
@@ -63,9 +86,7 @@ int	 parse_tex_1(t_strs s, t_map *map)
 	return (BAD);
 }
 
-// -------- no so we ea s -------------------------------------
-
-int	 parse_tex_2(t_strs s, t_map *map)
+int	parse_ea_s(t_strs s, t_map *map)
 {
 	if (s.len == 2 && is_ea(s.strs[0]))
 	{
@@ -88,11 +109,12 @@ int	 parse_tex_2(t_strs s, t_map *map)
 
 int	parse_initialize(t_strs s, t_map *map)
 {
-	int		check;
-	check = parse_tech(s, map);
-	if (check == BAD)
-		check = parse_tex_1(s, map);
-	if (check == BAD)
-		check = parse_tex_2(s, map);
+	int	check;
+
+	if ((check = parse_rfc(s, map)) == ERROR)
+		return (ERROR);
+	if ((check = parse_no_so_we(s, map)) == ERROR)
+		return (ERROR);
+	check = parse_ea_s(s, map);
 	return (check);
 }

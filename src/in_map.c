@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   in_map.c                                        :+:      :+:    :+:   */
+/*   in_map.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/25 23:32:52 by yzena             #+#    #+#             */
-/*   Updated: 2021/01/27 18:02:48 by yzena            ###   ########.fr       */
+/*   Created: 2021/02/16 12:29:38 by yzena             #+#    #+#             */
+/*   Updated: 2021/02/16 17:54:21 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header_map.h"
-#include "get_next_line.h"
-#include "libft.h"
-#include "parse_map.h"
+#include "parse.h"
 
-char	*ft_strs_addback(char ***begin_arr, char *s)
+char		*ft_strs_addback(char ***begin_arr, char *s)
 {
 	char	**res;
 	size_t	len;
@@ -58,11 +55,10 @@ int			in_map(char *line, t_map *map)
 	check = have_is_nothing(line);
 	if ((check))
 	{
-
 		if (ft_strs_addback(&(map->map), ft_strdup(line)) == NULL)
 			return (ERROR);
-	else
-		return (ERROR);
+		else
+			return (GOOD);
 	}
 	return (GOOD);
 }
