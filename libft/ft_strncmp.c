@@ -6,13 +6,13 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 13:03:50 by yzena             #+#    #+#             */
-/*   Updated: 2020/11/04 13:54:04 by yzena            ###   ########.fr       */
+/*   Updated: 2021/02/17 22:34:01 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "../includes/libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {
 	size_t count;
 

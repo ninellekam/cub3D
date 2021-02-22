@@ -6,11 +6,11 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 16:17:00 by yzena             #+#    #+#             */
-/*   Updated: 2020/11/04 14:22:49 by yzena            ###   ########.fr       */
+/*   Updated: 2021/02/17 22:32:04 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strnstr(const char *str, const char *needle, size_t len)
 {

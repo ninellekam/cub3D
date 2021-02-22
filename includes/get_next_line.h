@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:05:35 by yzena             #+#    #+#             */
-/*   Updated: 2021/01/24 18:28:37 by yzena            ###   ########.fr       */
+/*   Updated: 2021/02/20 13:24:44 by ninakamkia       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_calloc(size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strdup(char *src);
-// int		ft_strlen(const char *str);
 int		err_all(int fd, char **line, char **buf);
 int		err_red(int red, char **buf);
 #endif

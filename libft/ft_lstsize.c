@@ -6,11 +6,11 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 16:56:52 by yzena             #+#    #+#             */
-/*   Updated: 2021/01/24 18:23:06 by yzena            ###   ########.fr       */
+/*   Updated: 2021/02/17 22:32:47 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 int		ft_lstsize(t_list *lst)
 {

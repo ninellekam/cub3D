@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+        */
+/*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 16:14:43 by yzena             #+#    #+#             */
-/*   Updated: 2021/01/22 22:43:14 by ninakamkia       ###   ########.fr       */
+/*   Updated: 2021/02/17 22:34:57 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *str, const char *needle, size_t len);
-int				ft_strncmp(char *s1, char *s2, unsigned int n);
+int				ft_strncmp(const char *s1, const char *s2, unsigned int n);
 int				ft_atoi(const char *str);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);

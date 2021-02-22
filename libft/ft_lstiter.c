@@ -6,11 +6,11 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 17:01:51 by yzena             #+#    #+#             */
-/*   Updated: 2020/11/04 13:59:23 by yzena            ###   ########.fr       */
+/*   Updated: 2021/02/17 22:32:47 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

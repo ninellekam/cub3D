@@ -6,11 +6,11 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 17:28:27 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/16 22:39:49 by yzena            ###   ########.fr       */
+/*   Updated: 2021/02/17 22:32:47 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 static int		numstring(char const *s1, char c)
 {

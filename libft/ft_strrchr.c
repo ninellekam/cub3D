@@ -6,11 +6,11 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 16:15:58 by yzena             #+#    #+#             */
-/*   Updated: 2020/11/04 13:58:15 by yzena            ###   ########.fr       */
+/*   Updated: 2021/02/17 22:32:02 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char		*ft_strrchr(const char *s, int c)
 {
