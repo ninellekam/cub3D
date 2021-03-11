@@ -6,11 +6,11 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 16:58:25 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/17 22:32:47 by yzena            ###   ########.fr       */
+/*   Updated: 2020/11/04 14:00:19 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {

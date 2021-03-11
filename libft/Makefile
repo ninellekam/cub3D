@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yzena <yzena@student.42.fr>                +#+  +:+       +#+         #
+#    By: ninakamkia <ninakamkia@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/03 17:35:17 by yzena             #+#    #+#              #
-#    Updated: 2021/02/17 22:30:54 by yzena            ###   ########.fr        #
+#    Updated: 2021/01/22 22:43:02 by ninakamkia       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ ft_strnstr.c ft_isascii.c ft_memmove.c ft_strdup.c ft_strrchr.c ft_lstadd_back.c
 ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c\
 ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c\
 
-INC = ../includes
+BONUS =
 
 OBJS = ${SRCS:.c=.o}
 
@@ -30,7 +30,7 @@ OBJSBONUS = ${BONUS:.c=.o}
 CC		= gcc
 RM		= rm -f
 
-CXXFLAGS = -Wall -Wextra -Werror -c -I $(INC)
+CFLAGS = -Wall -Wextra -Werror -c
 
 $(NAME): ${OBJS}
 		ar rc ${NAME} ${OBJS}

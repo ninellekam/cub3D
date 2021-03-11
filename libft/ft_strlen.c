@@ -6,11 +6,11 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 16:14:15 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/17 22:32:47 by yzena            ###   ########.fr       */
+/*   Updated: 2020/11/04 14:42:09 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

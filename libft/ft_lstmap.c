@@ -6,12 +6,12 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 17:02:24 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/17 22:32:47 by yzena            ###   ########.fr       */
+/*   Updated: 2020/11/04 14:02:48 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "../includes/libft.h"
+#include "libft.h"
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

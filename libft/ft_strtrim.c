@@ -6,11 +6,11 @@
 /*   By: yzena <yzena@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 17:28:00 by yzena             #+#    #+#             */
-/*   Updated: 2021/02/17 22:32:00 by yzena            ###   ########.fr       */
+/*   Updated: 2020/10/30 17:28:06 by yzena            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

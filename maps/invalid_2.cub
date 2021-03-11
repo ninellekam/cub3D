@@ -1,8 +1,0 @@
-R  10000  10000
-NO textures/WALL68.xpm
-SO textures/greystone.xpm
-WE textures/bluestone.xpm
-EA               textures/WALL31.xpm
-S textures/coins.xpm
-F 255,255,0
-C 0,0,0
